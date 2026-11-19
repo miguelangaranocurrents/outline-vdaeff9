@@ -37,7 +37,7 @@ function Contents() {
   const itemRefs = useRef<Record<string, HTMLLIElement | null>>({});
 
   const headingPrefix =
-    documentContext.document?.getPreference(DocumentPreference.HeadingPrefix) ??
+    documentContext.document?.getPreference?.(DocumentPreference.HeadingPrefix) ??
     HeadingPrefixStyle.None;
 
   // Prefix labels are computed over every heading so that they match the
